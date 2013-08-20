@@ -376,4 +376,4 @@ integer
   / int2_or_4digit
 
 _
-  = [\t\n\r ]+
+  = [\t\n\r ]*
