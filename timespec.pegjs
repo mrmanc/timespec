@@ -186,11 +186,11 @@ date
 
     return now;
   }
-  / year:year_number [-] month:int1_2digit [-] date:int1_2digit {
+  / year:year_number [-]* month:int1_2digit [-]* date:int1_2digit {
     var now = new Date();
 
     now.setFullYear(year);
-    now.setMonth(month);
+    now.setMonth(month-1);
     now.setDate(date);
 
     return now;
@@ -199,7 +199,7 @@ date
     var now = new date();
 
     now.setfullyear(year);
-    now.setmonth(month);
+    now.setmonth(month-1);
     now.setdate(date);
 
     return now;
@@ -220,7 +220,7 @@ date
     var now = new date();
 
     now.setfullyear(year);
-    now.setmonth(month);
+    now.setmonth(month-1);
     now.setdate(date);
 
     return now;
@@ -235,7 +235,7 @@ date
     }
 
     now.setFullYear(now.getFullYear() + (amount.y * count));
-    now.setMonth(now.getMonth() + (amount.m * count));
+    now.setMonth(now.getMonth()-1 + (amount.m * count));
     now.setDate(now.getDate() + (amount.d * count));
     now.setHours(now.getHours() + (amount.h * count));
     now.setMinutes(now.getMinutes() + (amount.i * count));
